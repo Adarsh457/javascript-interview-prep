@@ -1,102 +1,182 @@
-#what is javascript ?
+# 01. JavaScript Variables and Data Types.
 
-javascript is a single threaded scripting language, Which is use to create dynamic web pages.
+---
 
-#Difference Between Var, let and Const
+## 1. What is JavaScript?
 
-var -> 1. can be redeclared and reassign
-       2. Function Scoped.
-       3. Supports Hoisting.
+**Ans:**  
+JavaScript is a single-threaded scripting language used to create dynamic and interactive web pages.
 
-Ex:   
+### Ex : 
+
+```js
+console.log("Hello JavaScript");
+```
+
+---
+
+## 2. Difference Between `var`, `let`, and `const`
+
+`var` :
+- can be redeclared and reassign
+- Function Scoped.
+- Supports Hoisting.
+
+### Ex:   
     var a = 10;
     var a = 20;
 
     console.log(a); // 20
 
-Let -> 1. can be redeclared  But Cannot be  reassign.
-       2. Blocked Scoped.
-       3. Temporal Dead Zone.
+`Let` :
+- Cannot be redeclared in the same scope
+- Can be reassigned
+- Block Scoped
+- Hoisted but stored inside Temporal Dead Zone (TDZ)
 
-Ex:
+### Ex:
         let age = 24;
         age = 25;
 
         console.log(age); // 25
 
-Const -> 1. Cannot be redeclared and reassign.
-         2. Blocked Scoped.
-         3. Temporal Dead Zone.
+`Const` :
+- Cannot be redeclared and reassign.
+- Blocked Scoped.
+- Temporal Dead Zone.
 
-Ex:
+## Ex:
         const PI = 3.14;
 
         // PI = 4; ❌ Error
 
+---
 
-#Data Types in JS.
+## 3. Data Types in JavaScript
+
+**Ans:**  
 
 Js has two categories. 
 
-Primitive Data Types.
+`Primitive Data Types` : (`string`, `number`, `bigint`, `boolean`, `undefined`, `symbol`, `null`).
+```js
+Ex :
+let str = "JavaScript";
+let num = 10;
+let big = 891283991n;
+let bool = true;
+let sym = Symbol("id");
+let und;
+let n = null;
+```
 
-String
-Boolean
-Number
-Null
-Undefined
-Symbol
-BigInt
+`Non - Primitive Data Types` :
 
-Non - Primitive Data Types
+`Object` : Objects store data in the form of key-value pairs.
 
-Object
-Array
-Function
+### Ex
 
-#Difference Between `==` and `===`
+```js
+let user = {
+  name: "Adarsh",
+  age: 24
+};
 
-Loosely Equal(==) -> Compares the values on both the side.
+console.log(user.name); // Adarsh
+```
 
-Ex: console.log(5 == "5"); // true
+`Array` : Arrays are used to store multiple values in a single variable.
 
-Strictly Equal(===) -> Compares both the Values and Data Types on both the side.
+### Ex
 
-Ex: console.log(5 === "5"); // false
+```js
+let numbers = [1, 2, 3, 4];
 
-#What is Type Coercion?
+console.log(numbers[0]); // 1
+```
+
+`Function` : Functions are reusable blocks of code used to perform specific tasks.
+
+### Ex
+
+```js
+function greet() {
+  console.log("Hello JavaScript");
+}
+
+greet();
+```
+
+---
+
+## 4. Difference Between `==` and `===` ?
+
+**Ans:**  
+
+`Loosely Equal(==)` -> Compares the values on both the side.
+
+### Ex: 
+
+```js
+console.log(5 == "5"); // true
+```
+
+`Strictly Equal(===)` -> Compares both the Values and Data Types on both the side.
+
+### Ex:
+
+```js
+console.log(5 === "5"); // false
+```
+
+---
+
+## 5. What is Type Coercion?
 
 Type coercion is JavaScript's automatic conversion of one data type into another during operations.
 
-Ex: 
+### Ex: 
 
+```js
 console.log("5" + 2); // "52"
+```
 
+---
 
-#Difference Between null and undefined
+## 6. Difference Between null and undefined ?
 
-undefined -> means a variable has been declared but no value has been assigned.
+**Ans:**  
 
-Ex: 
+`undefined` -> means a variable has been declared but no value has been assigned.
 
+### Ex: 
+
+```js
 let name;
-
 console.log(name); // undefined
+```
 
-null -> represents an intentional empty value.
+`null` -> represents an intentional empty value.
 
-Ex: 
+### Ex: 
 
+```js
 let user = null;
-
 console.log(user); // null
+```
 
-#What is NaN?
+---
 
-NaN stands for "Not a Number".
+## 7. What is NaN ?
+
+**Ans:**  
+
+`NaN` stands for "Not a Number".
 
 It occurs when a mathematical operation fails to produce a valid number.
 
-Ex:
+### Ex:
 
+```js
 console.log("hello" / 2); // NaN
+```
