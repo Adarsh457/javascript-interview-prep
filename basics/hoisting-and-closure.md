@@ -1,4 +1,4 @@
-# Hoisting and Closure
+# 02. Hoisting and Closure
 
 ---
 
