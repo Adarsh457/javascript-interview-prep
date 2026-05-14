@@ -1,4 +1,4 @@
-# 07. Currying and Debounce in JavaScript
+# 08. Currying and Debounce in JavaScript
 
 ---
 

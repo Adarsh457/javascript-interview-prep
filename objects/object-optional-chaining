@@ -1,0 +1,149 @@
+# 11. Optional Chaining in JavaScript
+
+---
+
+## What is Optional Chaining?
+
+### Answer
+
+Optional chaining (`?.`) is used to safely access nested object properties without causing errors if a property does not exist.
+
+It prevents:
+```js
+Cannot read properties of undefined
+```
+
+errors.
+
+---
+
+# Syntax
+
+```js
+object?.property
+```
+
+---
+
+# Example Without Optional Chaining
+
+```js
+const user = {};
+
+console.log(user.address.city);
+```
+
+### Output
+
+```js
+TypeError
+```
+
+Because `address` does not exist.
+
+---
+
+# Example With Optional Chaining
+
+```js
+const user = {};
+
+console.log(user?.address?.city);
+```
+
+### Output
+
+```js
+undefined
+```
+
+No error occurs.
+
+---
+
+# Nested Object Example
+
+```js
+const user = {
+  name: "Adarsh",
+
+  address: {
+    city: "Delhi"
+  }
+};
+
+console.log(user?.address?.city);
+```
+
+### Output
+
+```js
+Delhi
+```
+
+---
+
+# Optional Chaining with Arrays
+
+### Example
+
+```js
+const users = [
+  {
+    name: "Adarsh"
+  }
+];
+
+console.log(users?.[0]?.name);
+```
+
+### Output
+
+```js
+Adarsh
+```
+
+---
+
+# Optional Chaining with Functions
+
+### Example
+
+```js
+const user = {
+  greet() {
+    return "Hello";
+  }
+};
+
+console.log(user?.greet?.());
+```
+
+### Output
+
+```js
+Hello
+```
+
+---
+
+# Advantages of Optional Chaining
+
+- Prevents runtime errors
+- Cleaner code
+- Easier nested property access
+- Improves readability
+
+---
+
+# Important Point
+
+Optional chaining returns:
+```js
+undefined
+```
+
+if the property does not exist.
+
+It does NOT throw an error.
+
