@@ -1,4 +1,4 @@
-# `call()`, `apply()` and `bind()` in JavaScript
+# 17. `call()`, `apply()` and `bind()` in JavaScript
 
 ---
 
